@@ -6,6 +6,7 @@ class Location
 		@num = num
 		@address = address
 		@note = note
+		@note = @note.gsub("'","")
 		@lat = 0
 		@lng = 0
 	end

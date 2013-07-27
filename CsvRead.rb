@@ -9,11 +9,13 @@ class CsvRead
 		@locations = []
 		@filename = files
 		csvread
-		#geoset
-		h = HtmlFormatter.new
-		h.read("template.html")
-		h.replace(javacodes)
-		puts h.text
+		geoset
+	end
+	def write(filename)
+	  h = HtmlFormatter.new
+    h.read("template.html")
+    h.replace(javacodes)
+    open( filename , "w" ){|f| f.write(h.text)}
 	end
 	def javacodes
 	  s = ""
@@ -34,7 +36,7 @@ class CsvRead
 				next
 			end
 			if row[2] != nil then
-   				l = Location.new(row[0],"静岡県浜松市" + row[2],row[1])
+   				l = Location.new(row[0],"静岡県浜松市" + row[2].gsub("浜松市",""),row[2] + "," + row[1])
    			 @locations.push(l)
    	  end
 		end
@@ -42,6 +44,11 @@ class CsvRead
 	def geoset
 	  @locations.each{|l|
       l.geoload  
+      sleep(0.1)
 	  }
 	end
 end
+
+filename = "店舗.csv"
+csvread = CsvRead.new(filename)
+csvread.write("map.html")

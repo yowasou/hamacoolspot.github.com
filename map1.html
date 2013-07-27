@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>浜松市クールシェアスポット</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      html, body, #map-canvas {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script>
+var map;
+function initialize() {
+  var mapOptions = {
+    zoom: 12,
+    center: new google.maps.LatLng(34.710834, 137.726126),
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+  la = new Array();
+  l = new Array();l["lat"] = 34.708332;l["lng"] = 137.7306229;l["title"] = '㈲カスミヤ';la.push(l);
+l = new Array();l["lat"] = 34.72188910000001;l["lng"] = 137.7420245;l["title"] = '餃子専門店　ビワの木';la.push(l);
+l = new Array();l["lat"] = 34.7551036;l["lng"] = 137.697757;l["title"] = 'ホリデー車検高丘株式会社カーポイント';la.push(l);
+l = new Array();l["lat"] = 34.798658;l["lng"] = 137.789125;l["title"] = 'SHOP　ONPU♪';la.push(l);
+l = new Array();l["lat"] = 34.7119406;l["lng"] = 137.7570546;l["title"] = 'フルーツShomeido(正明堂)';la.push(l);
+l = new Array();l["lat"] = 34.7069404;l["lng"] = 137.7286036;l["title"] = '松作商店';la.push(l);
+l = new Array();l["lat"] = 34.733874;l["lng"] = 137.7506431;l["title"] = 'プレステージ';la.push(l);
+l = new Array();l["lat"] = 34.7038575;l["lng"] = 137.7331452;l["title"] = '遠鉄百貨店';la.push(l);
+l = new Array();l["lat"] = 34.7187223;l["lng"] = 137.7088239;l["title"] = '株式会社遠鉄ストア富塚店';la.push(l);
+l = new Array();l["lat"] = 34.7791231;l["lng"] = 137.7744994;l["title"] = '株式会社遠鉄ストア西ヶ崎店';la.push(l);
+l = new Array();l["lat"] = 0;l["lng"] = 0;l["title"] = '株式会社遠鉄ストア笠井店';la.push(l);
+l = new Array();l["lat"] = 0;l["lng"] = 0;l["title"] = '株式会社遠鉄ストア鴨江店';la.push(l);
+l = new Array();l["lat"] = 34.70862049999999;l["lng"] = 137.6994254;l["title"] = '株式会社遠鉄ストア佐鳴台店';la.push(l);
+l = new Array();l["lat"] = 34.6867951;l["lng"] = 137.773567;l["title"] = '株式会社遠鉄ストア立野店';la.push(l);
+l = new Array();l["lat"] = 34.8100714;l["lng"] = 137.8049171;l["title"] = '株式会社遠鉄ストア浜北店';la.push(l);
+l = new Array();l["lat"] = 34.8114237;l["lng"] = 137.6859143;l["title"] = '株式会社遠鉄ストア祝田店';la.push(l);
+l = new Array();l["lat"] = 34.7719581;l["lng"] = 137.7198236;l["title"] = '株式会社遠鉄ストア初生店';la.push(l);
+l = new Array();l["lat"] = 34.7322862;l["lng"] = 137.6585284;l["title"] = '株式会社遠鉄ストア大人見店';la.push(l);
+l = new Array();l["lat"] = 34.7350549;l["lng"] = 137.7630311;l["title"] = '株式会社遠鉄ストア天王店';la.push(l);
+l = new Array();l["lat"] = 34.6857115;l["lng"] = 137.6684373;l["title"] = '株式会社遠鉄ストア篠原店';la.push(l);
+l = new Array();l["lat"] = 34.68466799999999;l["lng"] = 137.6998595;l["title"] = '株式会社遠鉄ストア新橋店';la.push(l);
+l = new Array();l["lat"] = 34.71233640000001;l["lng"] = 137.6786937;l["title"] = '株式会社遠鉄ストア大平台店';la.push(l);
+l = new Array();l["lat"] = 0;l["lng"] = 0;l["title"] = '株式会社遠鉄ストア天竜店';la.push(l);
+l = new Array();l["lat"] = 0;l["lng"] = 0;l["title"] = '株式会社遠鉄ストア桜台店';la.push(l);
+l = new Array();l["lat"] = 0;l["lng"] = 0;l["title"] = '株式会社遠鉄ストア　フードワンきらりタウン店';la.push(l);
+l = new Array();l["lat"] = 0;l["lng"] = 0;l["title"] = '株式会社遠鉄ストア　フードワン南浅田店';la.push(l);
+l = new Array();l["lat"] = 0;l["lng"] = 0;l["title"] = '株式会社遠鉄ストア　フードワン泉店';la.push(l);
+l = new Array();l["lat"] = 0;l["lng"] = 0;l["title"] = '株式会社遠鉄ストア　三ヶ日店';la.push(l);
+l = new Array();l["lat"] = 34.7245999;l["lng"] = 137.732122;l["title"] = '株式会社遠鉄ストア　高林店';la.push(l);
+l = new Array();l["lat"] = 34.7084209;l["lng"] = 137.7310701;l["title"] = 'チカコズコレクション';la.push(l);
+l = new Array();l["lat"] = 34.703741;l["lng"] = 137.734442;l["title"] = '浜松駅ビル　メイワン';la.push(l);
+l = new Array();l["lat"] = 34.703741;l["lng"] = 137.734442;l["title"] = '浜松馬込郵便局';la.push(l);
+l = new Array();l["lat"] = 34.703741;l["lng"] = 137.734442;l["title"] = '浜松鴨江郵便局';la.push(l);
+l = new Array();l["lat"] = 34.703741;l["lng"] = 137.734442;l["title"] = '浜松中沢郵便局';la.push(l);
+l = new Array();l["lat"] = 34.703741;l["lng"] = 137.734442;l["title"] = '浜松成子郵便局';la.push(l);
+l = new Array();l["lat"] = 34.703741;l["lng"] = 137.734442;l["title"] = '浜松海老塚郵便局';la.push(l);
+l = new Array();l["lat"] = 34.703741;l["lng"] = 137.734442;l["title"] = '浜松北寺島郵便局';la.push(l);
+l = new Array();l["lat"] = 34.7138858;l["lng"] = 137.7293581;l["title"] = '浜松元目郵便局';la.push(l);
+l = new Array();l["lat"] = 0;l["lng"] = 0;l["title"] = '浜松連尺郵便局';la.push(l);
+l = new Array();l["lat"] = 0;l["lng"] = 0;l["title"] = '浜松竜禅寺郵便局';la.push(l);
+l = new Array();l["lat"] = 0;l["lng"] = 0;l["title"] = '浜松砂山郵便局';la.push(l);
+l = new Array();l["lat"] = 34.703741;l["lng"] = 137.734442;l["title"] = '浜松秋葉坂下郵便局';la.push(l);
+l = new Array();l["lat"] = 34.703741;l["lng"] = 137.734442;l["title"] = '浜松浅田郵便局';la.push(l);
+l = new Array();l["lat"] = 34.703741;l["lng"] = 137.734442;l["title"] = '浜松アクトシティ内郵便局';la.push(l);
+l = new Array();l["lat"] = 0;l["lng"] = 0;l["title"] = 'イオン浜松市野店';la.push(l);
+l = new Array();l["lat"] = 0;l["lng"] = 0;l["title"] = 'イオン浜松西店';la.push(l);
+l = new Array();l["lat"] = 34.703741;l["lng"] = 137.734442;l["title"] = 'イオン志都呂店';la.push(l);
+l = new Array();l["lat"] = 34.7173801;l["lng"] = 137.7236208;l["title"] = '寿司割烹　絆';la.push(l);
+l = new Array();l["lat"] = 0;l["lng"] = 0;l["title"] = 'はんの貫永堂';la.push(l);
+l = new Array();l["lat"] = 34.703741;l["lng"] = 137.734442;l["title"] = 'オークラアクトシティホテル浜松';la.push(l);
+l = new Array();l["lat"] = 0;l["lng"] = 0;l["title"] = '笠井屋';la.push(l);
+l = new Array();l["lat"] = 0;l["lng"] = 0;l["title"] = 'BOOKアマノ三方原店';la.push(l);
+l = new Array();l["lat"] = 0;l["lng"] = 0;l["title"] = 'BOOKアマノ入野店';la.push(l);
+l = new Array();l["lat"] = 0;l["lng"] = 0;l["title"] = 'BOOKアマノアクト北店';la.push(l);
+l = new Array();l["lat"] = 34.703741;l["lng"] = 137.734442;l["title"] = 'BOOKアマノ有玉店';la.push(l);
+l = new Array();l["lat"] = 0;l["lng"] = 0;l["title"] = 'BOOKアマノ高丘店';la.push(l);
+l = new Array();l["lat"] = 34.703741;l["lng"] = 137.734442;l["title"] = 'インド料理ラクシュミ';la.push(l);
+
+  /*
+  l = new Array();
+  l["lat"] = -33.890542;
+  l["lng"] = 151.274856;
+  l["title"] = 'Hello World!!';
+  la.push(l);
+  l = new Array();
+  l["lat"] = -32.890542;
+  l["lng"] = 151.274856;
+  l["title"] = 'Hello World!?';
+  la.push(l);
+  */
+  la.forEach(AddMap);
+
+}
+function AddMap(h){
+  myLatLng = new google.maps.LatLng(h["lat"], h["lng"]);
+  marker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      title: h["title"]
+  });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+  </head>
+  <body>
+    <div id="map-canvas"></div>
+  </body>
+</html>
