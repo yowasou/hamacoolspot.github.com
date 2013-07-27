@@ -6,6 +6,8 @@ class Location
 		@num = num
 		@address = address
 		@note = note
+		@lat = 0
+		@lng = 0
 	end
 	def geoload
 	  h = geoget(@address)

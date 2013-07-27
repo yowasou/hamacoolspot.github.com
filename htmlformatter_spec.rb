@@ -13,7 +13,7 @@ describe HtmlFormatter do
     it {s.length.should > 5}
   end   
   context "replace?" do
-    it {f.replace("ooo").index("ooo").should > 0}
+    it {f.replace("ooo").index("ooo").should_not == nil}
   end   
   #context "配列になってる？" do
   #  it {csvread.locations.size.should >= 0}
