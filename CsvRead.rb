@@ -49,6 +49,5 @@ class CsvRead
 	end
 end
 
-filename = "店舗.csv"
-csvread = CsvRead.new(filename)
-csvread.write("map.html")
+CsvRead.new("店舗.csv").write("map1.html")
+CsvRead.new("公共施設.csv").write("map2.html")

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>浜松市クールシェアスポット</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      html, body, #map-canvas {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script>
+var map;
+function initialize() {
+  var mapOptions = {
+    zoom: 12,
+    center: new google.maps.LatLng(34.710834, 137.726126),
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+  la = new Array();
+  l = new Array();l["lat"] = 34.7102014;l["lng"] = 137.7357475;l["title"] = '中区中央一丁目12-7,地域情報センター';la.push(l);
+l = new Array();l["lat"] = 34.7049826;l["lng"] = 137.7398614;l["title"] = '中区北寺島町256-3,浜松科学館';la.push(l);
+l = new Array();l["lat"] = 34.7108344;l["lng"] = 137.7261258;l["title"] = '　,　';la.push(l);
+l = new Array();l["lat"] = 34.7096317;l["lng"] = 137.7254398;l["title"] = '中区松城町214-21,浜松市立中央図書館';la.push(l);
+l = new Array();l["lat"] = 34.7108344;l["lng"] = 137.7261258;l["title"] = '通常利用スペースを開放,　';la.push(l);
+l = new Array();l["lat"] = 34.7301936;l["lng"] = 137.7190167;l["title"] = '中区和地山二丁目37-2,浜松市立城北図書館';la.push(l);
+l = new Array();l["lat"] = 34.6843426;l["lng"] = 137.6822528;l["title"] = '南区小沢渡町1142-1,浜松市立可新図書館';la.push(l);
+l = new Array();l["lat"] = 34.7108344;l["lng"] = 137.7261258;l["title"] = '通常利用スペースを開放,　';la.push(l);
+l = new Array();l["lat"] = 34.7378577;l["lng"] = 137.6575533;l["title"] = '西区大人見町1750-394,浜松市立はまゆう図書館';la.push(l);
+l = new Array();l["lat"] = 34.7108344;l["lng"] = 137.7261258;l["title"] = '通常利用スペースを開放,　';la.push(l);
+l = new Array();l["lat"] = 34.8644252;l["lng"] = 137.8178314;l["title"] = '天竜区二俣町二俣184-32,浜松市立天竜図書館';la.push(l);
+l = new Array();l["lat"] = 34.7108344;l["lng"] = 137.7261258;l["title"] = '通常利用スペースを開放,　';la.push(l);
+l = new Array();l["lat"] = 34.6792624;l["lng"] = 137.613368;l["title"] = '西区舞阪町舞阪2668-56,浜松市立舞阪図書館';la.push(l);
+l = new Array();l["lat"] = 34.7108344;l["lng"] = 137.7261258;l["title"] = '通常利用スペースを開放,　';la.push(l);
+l = new Array();l["lat"] = 34.6994448;l["lng"] = 137.6318519;l["title"] = '西区雄踏町宇布見8287,浜松市立雄踏図書館';la.push(l);
+l = new Array();l["lat"] = 34.7108344;l["lng"] = 137.7261258;l["title"] = '通常利用スペースを開放,　';la.push(l);
+l = new Array();l["lat"] = 34.81360590000001;l["lng"] = 137.6563697;l["title"] = '北区細江町気賀4579-1,浜松市立細江図書館';la.push(l);
+l = new Array();l["lat"] = 34.7108344;l["lng"] = 137.7261258;l["title"] = '通常利用スペースを開放,　';la.push(l);
+l = new Array();l["lat"] = 34.8345566;l["lng"] = 137.6714844;l["title"] = '北区引佐町井伊谷610-2,浜松市立引佐図書館';la.push(l);
+l = new Array();l["lat"] = 34.7108344;l["lng"] = 137.7261258;l["title"] = '通常利用スペースを開放,　';la.push(l);
+l = new Array();l["lat"] = 34.8067315;l["lng"] = 137.5579409;l["title"] = '北区三ヶ日町宇志799-1,浜松市立三ケ日図書館';la.push(l);
+l = new Array();l["lat"] = 34.7108344;l["lng"] = 137.7261258;l["title"] = '通常利用スペースを開放,　';la.push(l);
+l = new Array();l["lat"] = 34.9794109;l["lng"] = 137.8972357;l["title"] = '天竜区春野町宮川1327-1,浜松市立春野図書館';la.push(l);
+l = new Array();l["lat"] = 34.7108344;l["lng"] = 137.7261258;l["title"] = '通常利用スペースを開放,　';la.push(l);
+l = new Array();l["lat"] = 35.0921188;l["lng"] = 137.8102439;l["title"] = '天竜区佐久間町佐久間2431-3,浜松市立佐久間図書館';la.push(l);
+l = new Array();l["lat"] = 34.7108344;l["lng"] = 137.7261258;l["title"] = '通常利用スペースを開放,　';la.push(l);
+l = new Array();l["lat"] = 35.1663903;l["lng"] = 137.8691509;l["title"] = '天竜区水窪町奥領家3274-1,浜松市立水窪図書館';la.push(l);
+l = new Array();l["lat"] = 34.7108344;l["lng"] = 137.7261258;l["title"] = '通常利用スペースを開放,　';la.push(l);
+l = new Array();l["lat"] = 35.0233983;l["lng"] = 137.840234;l["title"] = '天竜区龍山町瀬尻982‐2,浜松市立龍山図書館';la.push(l);
+l = new Array();l["lat"] = 34.6976552;l["lng"] = 137.7023173;l["title"] = '中区西伊場町52-17,浜松市立西図書館';la.push(l);
+l = new Array();l["lat"] = 34.7108344;l["lng"] = 137.7261258;l["title"] = '通常利用スペースを開放,　';la.push(l);
+l = new Array();l["lat"] = 34.7697848;l["lng"] = 137.7615284;l["title"] = '東区積志町1819,浜松市立積志図書館';la.push(l);
+l = new Array();l["lat"] = 34.7108344;l["lng"] = 137.7261258;l["title"] = '通常利用スペースを開放,　';la.push(l);
+l = new Array();l["lat"] = 34.6967474;l["lng"] = 137.7334981;l["title"] = '中区海老塚2-25-17,浜松市立南図書館';la.push(l);
+l = new Array();l["lat"] = 34.7108344;l["lng"] = 137.7261258;l["title"] = '通常利用スペースを開放,　';la.push(l);
+l = new Array();l["lat"] = 34.7567517;l["lng"] = 137.7204601;l["title"] = '中区葵東1-15-1,浜松市立北図書館';la.push(l);
+l = new Array();l["lat"] = 34.7108344;l["lng"] = 137.7261258;l["title"] = '通常利用スペースを開放,　';la.push(l);
+l = new Array();l["lat"] = 34.7131824;l["lng"] = 137.7616486;l["title"] = '東区子安町309-1,浜松市立東図書館';la.push(l);
+l = new Array();l["lat"] = 34.7108344;l["lng"] = 137.7261258;l["title"] = '通常利用スペースを開放,　';la.push(l);
+l = new Array();l["lat"] = 34.6800433;l["lng"] = 137.7720198;l["title"] = '南区下江町462,浜松市立南陽図書館';la.push(l);
+l = new Array();l["lat"] = 34.7108344;l["lng"] = 137.7261258;l["title"] = '通常利用スペースを開放,　';la.push(l);
+l = new Array();l["lat"] = 34.7411586;l["lng"] = 137.7904532;l["title"] = '東区流通元町20-2,浜松市立流通元町図書館';la.push(l);
+l = new Array();l["lat"] = 34.7045796;l["lng"] = 137.7332229;l["title"] = '中区旭町12-1,浜松市立中央図書館駅前分室';la.push(l);
+l = new Array();l["lat"] = 34.7108344;l["lng"] = 137.7261258;l["title"] = '月曜日（休日の場合は開館）,053-458-2180';la.push(l);
+l = new Array();l["lat"] = 34.7916278;l["lng"] = 137.7832814;l["title"] = '浜北区貴布祢3000,浜松市立浜北図書館';la.push(l);
+l = new Array();l["lat"] = 34.7001551;l["lng"] = 137.7283345;l["title"] = '中区成子町140-8,浜松市福祉交流センター';la.push(l);
+l = new Array();l["lat"] = 34.705099;l["lng"] = 137.7303008;l["title"] = '中区鍛冶町100-1,浜松こども館';la.push(l);
+l = new Array();l["lat"] = 34.7108344;l["lng"] = 137.7261258;l["title"] = '有料施設,　';la.push(l);
+l = new Array();l["lat"] = 34.7653495;l["lng"] = 137.6986374;l["title"] = '中区高丘北三丁目15-8,瑞穂なかよし館';la.push(l);
+l = new Array();l["lat"] = 34.712062;l["lng"] = 137.7183984;l["title"] = '中区広沢三丁目11-9,広沢なかよし館';la.push(l);
+l = new Array();l["lat"] = 34.7682442;l["lng"] = 137.7110859;l["title"] = '中区葵西二丁目25-2,葵西なかよし館';la.push(l);
+l = new Array();l["lat"] = 34.7063846;l["lng"] = 137.6972368;l["title"] = '中区佐鳴台三丁目31-3,佐鳴台なかよし館';la.push(l);
+l = new Array();l["lat"] = 34.7722941;l["lng"] = 137.7955423;l["title"] = '東区笠井町1050,笠井なかよし館';la.push(l);
+l = new Array();l["lat"] = 34.7672924;l["lng"] = 137.8042329;l["title"] = '東区豊西町1551,豊西なかよし館';la.push(l);
+l = new Array();l["lat"] = 34.7467177;l["lng"] = 137.7654328;l["title"] = '東区市野町2715,与進北なかよし館';la.push(l);
+l = new Array();l["lat"] = 34.7586678;l["lng"] = 137.6266253;l["title"] = '西区白洲町295-1,北庄内なかよし館';la.push(l);
+l = new Array();l["lat"] = 34.7277259;l["lng"] = 137.669494;l["title"] = '西区神ヶ谷町3490,神久呂なかよし館';la.push(l);
+l = new Array();l["lat"] = 34.6842891;l["lng"] = 137.656669;l["title"] = '西区篠原町10300,篠原なかよし館';la.push(l);
+l = new Array();l["lat"] = 34.6987799;l["lng"] = 137.6857409;l["title"] = '西区入野町6470-1,入野なかよし館';la.push(l);
+l = new Array();l["lat"] = 34.703362;l["lng"] = 137.6643094;l["title"] = '西区西鴨江町1106,西都台なかよし館';la.push(l);
+l = new Array();l["lat"] = 34.7665953;l["lng"] = 137.6666156;l["title"] = '西区湖東町2005,和地なかよし館';la.push(l);
+l = new Array();l["lat"] = 34.6573845;l["lng"] = 137.7668452;l["title"] = '南区遠州浜二丁目9-10,遠州浜なかよし館';la.push(l);
+l = new Array();l["lat"] = 34.7869892;l["lng"] = 137.7194204;l["title"] = '北区豊岡町22,豊岡なかよし館';la.push(l);
+l = new Array();l["lat"] = 34.7734171;l["lng"] = 137.685222;l["title"] = '中区花川町1977,北星児童館';la.push(l);
+l = new Array();l["lat"] = 34.6898788;l["lng"] = 137.7252822;l["title"] = '中区春日町41-1,江西児童館';la.push(l);
+l = new Array();l["lat"] = 34.8060594;l["lng"] = 137.5586854;l["title"] = '北区三ヶ日町宇志803,三ヶ日児童館';la.push(l);
+l = new Array();l["lat"] = 34.8488438;l["lng"] = 137.8098854;l["title"] = '天竜区二俣町鹿島530-1,天竜児童館';la.push(l);
+l = new Array();l["lat"] = 34.7131891;l["lng"] = 137.6791353;l["title"] = '西区大平台三丁目21-18,浜松市エコハウスモデル住宅';la.push(l);
+l = new Array();l["lat"] = 34.6748238;l["lng"] = 137.6650019;l["title"] = '西区篠原町26098-1,浜松市西部清掃工場管理棟「えこはま」';la.push(l);
+l = new Array();l["lat"] = 34.7618313;l["lng"] = 137.634441;l["title"] = '西区舘山寺町195,はままつフラワーパーク';la.push(l);
+l = new Array();l["lat"] = 34.715809;l["lng"] = 137.7268838;l["title"] = '中区下池川町19-1,消防局・中消防署合同庁舎';la.push(l);
+l = new Array();l["lat"] = 34.7611609;l["lng"] = 137.6929186;l["title"] = '中区高丘西4-7-1,浜松市北部水泳場';la.push(l);
+l = new Array();l["lat"] = 34.8060594;l["lng"] = 137.5586854;l["title"] = '北区三ヶ日町宇志803,浜松市三ヶ日総合福祉センター';la.push(l);
+l = new Array();l["lat"] = 34.8726212;l["lng"] = 137.8162508;l["title"] = '天竜区二俣町二俣481,天竜区役所';la.push(l);
+l = new Array();l["lat"] = 34.7016474;l["lng"] = 137.6345322;l["title"] = '西区雄踏町宇布見5427,雄踏文化センター';la.push(l);
+l = new Array();l["lat"] = 34.7335447;l["lng"] = 137.6694326;l["title"] = '西区神原町922,神久呂協働センター';la.push(l);
+l = new Array();l["lat"] = 34.6989157;l["lng"] = 137.6777833;l["title"] = '西区入野町9858,入野協働センター';la.push(l);
+l = new Array();l["lat"] = 34.7438373;l["lng"] = 137.6557923;l["title"] = '西区伊左地町45,伊佐見協働センター';la.push(l);
+l = new Array();l["lat"] = 34.7668758;l["lng"] = 137.6657907;l["title"] = '西区和地町6578,和地協働センター';la.push(l);
+l = new Array();l["lat"] = 34.755623;l["lng"] = 137.6068669;l["title"] = '西区庄内町14-5,庄内協働センター';la.push(l);
+l = new Array();l["lat"] = 34.6824061;l["lng"] = 137.6604881;l["title"] = '西区篠原町20399-1,篠原協働センター';la.push(l);
+l = new Array();l["lat"] = 34.7413392;l["lng"] = 137.7917419;l["title"] = '東区流通元町20-3,東区役所';la.push(l);
+l = new Array();l["lat"] = 34.7929447;l["lng"] = 137.7900502;l["title"] = '浜北区西美薗6,浜北区役所';la.push(l);
+l = new Array();l["lat"] = 34.7850557;l["lng"] = 137.7733187;l["title"] = '浜北区小松2789,浜名協働センター';la.push(l);
+l = new Array();l["lat"] = 34.8216375;l["lng"] = 137.7735533;l["title"] = '浜北区宮口3171,麁玉協働センター';la.push(l);
+l = new Array();l["lat"] = 34.8244391;l["lng"] = 137.8114802;l["title"] = '浜北区中瀬3501-1,中瀬協働センター';la.push(l);
+l = new Array();l["lat"] = 34.7845512;l["lng"] = 137.792917;l["title"] = '浜北区寺島2946,北浜南部協働センター';la.push(l);
+l = new Array();l["lat"] = 34.8346425;l["lng"] = 137.8020615;l["title"] = '浜北区於呂2829-1,浜北地域活動・研修センター';la.push(l);
+l = new Array();l["lat"] = 34.6673189;l["lng"] = 137.7523718;l["title"] = '南区江之島町600-1,南区役所';la.push(l);
+l = new Array();l["lat"] = 34.7686;l["lng"] = 137.7951981;l["title"] = '東区笠井町861,笠井協働センター';la.push(l);
+l = new Array();l["lat"] = 34.7131824;l["lng"] = 137.7616486;l["title"] = '東区子安町309-1,蒲協働センター';la.push(l);
+l = new Array();l["lat"] = 34.7697848;l["lng"] = 137.7620561;l["title"] = '東区積志町1825,積志協働センター';la.push(l);
+l = new Array();l["lat"] = 34.7271823;l["lng"] = 137.7875541;l["title"] = '東区薬新町99,天竜協働センター';la.push(l);
+l = new Array();l["lat"] = 34.746654;l["lng"] = 137.7679632;l["title"] = '東区市野町2620-1,長上協働センター';la.push(l);
+l = new Array();l["lat"] = 34.7779476;l["lng"] = 137.8153475;l["title"] = '浜北区高薗775-1,発達医療総合福祉センター';la.push(l);
+l = new Array();l["lat"] = 34.7095986;l["lng"] = 137.7346531;l["title"] = '中区中央一丁目13-3　3階フロア,男女共同参画推進センター';la.push(l);
+l = new Array();l["lat"] = 34.6800433;l["lng"] = 137.7720198;l["title"] = '南区下江町462,南陽協働センター';la.push(l);
+l = new Array();l["lat"] = 34.6817407;l["lng"] = 137.7068729;l["title"] = '南区新橋町910,新津協働センター';la.push(l);
+l = new Array();l["lat"] = 34.6823999;l["lng"] = 137.7427782;l["title"] = '南区寺脇町241,白脇協働センター';la.push(l);
+l = new Array();l["lat"] = 34.6634952;l["lng"] = 137.7689089;l["title"] = '南区福島町242-1,五島協働センター';la.push(l);
+l = new Array();l["lat"] = 34.6947138;l["lng"] = 137.6922127;l["title"] = '南区増楽町1723-1,可美協働センター';la.push(l);
+l = new Array();l["lat"] = 35.0916356;l["lng"] = 137.8136574;l["title"] = '天竜区佐久間町佐久間429-1,佐久間協働センター';la.push(l);
+l = new Array();l["lat"] = 35.155947;l["lng"] = 137.8691456;l["title"] = '天竜区水窪町,水窪協働センター';la.push(l);
+l = new Array();l["lat"] = 34.7108344;l["lng"] = 137.7261258;l["title"] = '土・日・祝日・年末年始,053-982-0001';la.push(l);
+l = new Array();l["lat"] = 34.7095986;l["lng"] = 137.7346531;l["title"] = '中区中央一丁目13-3,市民協働センター';la.push(l);
+
+  /*
+  l = new Array();
+  l["lat"] = -33.890542;
+  l["lng"] = 151.274856;
+  l["title"] = 'Hello World!!';
+  la.push(l);
+  l = new Array();
+  l["lat"] = -32.890542;
+  l["lng"] = 151.274856;
+  l["title"] = 'Hello World!?';
+  la.push(l);
+  */
+  la.forEach(AddMap);
+
+}
+function AddMap(h){
+  myLatLng = new google.maps.LatLng(h["lat"], h["lng"]);
+  marker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      title: h["title"]
+  });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+  </head>
+  <body>
+  	浜松市クールシェアスポット一覧<br>
+  	<a href="http://www.hamaeco.org/share2.html">http://www.hamaeco.org/share2.html</a><br>
+  	<a href="map1.html">店舗</a><br>
+  	<a href="map2.html">公共施設</a>
+    <div id="map-canvas"></div>
+  </body>
+</html>
