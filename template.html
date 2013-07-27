@@ -16,18 +16,35 @@
 var map;
 function initialize() {
   var mapOptions = {
-    zoom: 8,
-    center: new google.maps.LatLng(-34.397, 150.644),
+    zoom: 12,
+    center: new google.maps.LatLng(34.710834, 137.726126),
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
   map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
+  la = new Array();
+  <% initarray %>
+  /*
+  l = new Array();
+  l["lat"] = -33.890542;
+  l["lng"] = 151.274856;
+  l["title"] = 'Hello World!!';
+  la.push(l);
+  l = new Array();
+  l["lat"] = -32.890542;
+  l["lng"] = 151.274856;
+  l["title"] = 'Hello World!?';
+  la.push(l);
+  */
+  la.forEach(AddMap);
 
-  var myLatLng = new google.maps.LatLng(-33.890542, 151.274856);
-  var marker = new google.maps.Marker({
+}
+function AddMap(h){
+  myLatLng = new google.maps.LatLng(h["lat"], h["lng"]);
+  marker = new google.maps.Marker({
       position: myLatLng,
       map: map,
-      title: 'Hello World!'
+      title: h["title"]
   });
 }
 
