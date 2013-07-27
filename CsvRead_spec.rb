@@ -10,8 +10,12 @@ describe CsvRead do
   end   
   context "配列になってる？" do
   	it {csvread.locations.size.should >= 0}
-  end 
+  end
   context "1件以上読み込んでる？" do
   	it {csvread.locations.size.should >= 1}
   end 
+  context "1件目住所の緯度経度" do
+    csvread.locations[0].geoload      
+    it {csvread.locations[0].lat.to_f > 1}
+  end
 end

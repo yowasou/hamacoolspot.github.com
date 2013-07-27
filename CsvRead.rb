@@ -8,7 +8,6 @@ class CsvRead
 		@locations = []
 		@filename = files
 		csvread
-		p locations[0].address
 	end
 	def csvread
 		i = 0
@@ -22,5 +21,10 @@ class CsvRead
    			end
    			@locations.push(l)
 		end
+	end
+	def geoset
+	  @locations.each{|l|
+      l.geoload  
+	  }
 	end
 end
