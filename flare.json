@@ -7,8 +7,8 @@
     {
      "name": "cluster",
      "children": [
-{name": "flare.json", "size": 3938},
-{name": "index.html", "size": 3938}
+{"name": "flare.json", "size": 3938},
+{"name": "index.html", "size": 3938}
      ]
     }
     ]
